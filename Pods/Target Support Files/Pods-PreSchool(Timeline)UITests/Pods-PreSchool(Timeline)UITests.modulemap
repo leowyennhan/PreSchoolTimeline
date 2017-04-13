@@ -1,0 +1,6 @@
+framework module Pods_PreSchool_Timeline_UITests {
+  umbrella header "Pods-PreSchool(Timeline)UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
