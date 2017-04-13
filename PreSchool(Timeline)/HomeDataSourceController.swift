@@ -40,10 +40,16 @@ class HomeDataSourceController: DatasourceController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: followbutton ) //setting it to the left side
         
         let searchButton = UIButton(type: .system)
-        searchButton.setImage(#imageLiteral(resourceName: "Search"), for: .normal)
+        searchButton.setImage(#imageLiteral(resourceName: "Search").withRenderingMode(.alwaysOriginal), for: .normal)
         
         searchButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: searchButton)
+        
+        let composeButton = UIButton(type: .system)
+        composeButton.setImage(#imageLiteral(resourceName: "write").withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        composeButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: composeButton), UIBarButtonItem(customView: searchButton)]  //buttons compose opposite way.
     }
     
     
